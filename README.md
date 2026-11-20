@@ -79,6 +79,14 @@ Alur pertukaran data berjalan melalui tahapan berikut:
 
 ---
 
+### Endpoint API Modul Reservasi & Obrolan
+- GET /api/reservasi/ — Mengambil daftar reservasi aktif (DITERIMA & arsip SELESAI < 12 jam) milik pengguna yang sedang login.
+- POST /api/reservasi/join/<int:post_id>/ — Mengajukan permintaan reservasi nebeng pada suatu RidePost.
+- POST /api/reservasi/<int:pk>/decide/ — Menerima (accept) atau menolak (reject) permintaan reservasi oleh driver.
+- POST /api/reservasi/<int:reservasi_id>/selesaikan/ — Menyelesaikan perjalanan dan menambahkan poin reward ke driver.
+- GET, POST /api/reservasi/<int:reservasi_id>/chat/ — Mengambil riwayat pesan atau mengirim pesan baru pada reservasi yang sudah diterima.
+- PATCH, DELETE /api/chat/<int:pesan_id>/ — Mengubah atau menarik pesan terakhir yang dikirim pengguna.
+
 ## Tautan Penting
 * **Tautan Deployment Web & API (PWS):** [https://muhammad-ridho52-nebengkui.pws.cs.ui.ac.id/](https://muhammad-ridho52-nebengkui.pws.cs.ui.ac.id/)
 * **Tautan Desain UI/Wireframe Web (Referensi Proyek Tengah Semester):** [Figma Nebeng-kUI Web](https://www.figma.com/design/NBWjUCqdKOdoI8wgXfTb5E/Nebeng-kUI?node-id=0-1&t=calHUAJZhuKMqxEM-1)

@@ -70,8 +70,9 @@ class InboxReservasiPage extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        backgroundColor:
-                            isUnlocked ? Colors.green : Colors.orange,
+                        backgroundColor: isUnlocked
+                            ? Colors.green
+                            : Colors.orange,
                       ),
                     ],
                   ),
