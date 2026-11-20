@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:nebengkui_mobile/maps/maps_page.dart';
 import 'package:nebengkui_mobile/widgets/left_drawer.dart';
 import 'package:nebengkui_mobile/reservasi/screens/inbox_reservasi_page.dart';
 
@@ -52,6 +53,27 @@ class MyHomePage extends StatelessWidget {
                 },
                 icon: const Icon(Icons.chat),
                 label: const Text('Buka Reservasi & Obrolan'),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.indigo,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 12,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MapsPage(),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.map),
+                label: const Text('Lihat Peta'),
               ),
             ],
           ),

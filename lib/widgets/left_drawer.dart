@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:nebengkui_mobile/maps/maps_page.dart';
 import 'package:nebengkui_mobile/screens/menu.dart';
 import 'package:nebengkui_mobile/reservasi/screens/inbox_reservasi_page.dart';
 
@@ -52,6 +53,18 @@ class LeftDrawer extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const InboxReservasiPage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.map_outlined),
+            title: const Text('Peta & Titik Kumpul'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MapsPage(),
                 ),
               );
             },
